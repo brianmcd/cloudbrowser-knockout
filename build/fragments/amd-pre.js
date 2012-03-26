@@ -1,3 +1,7 @@
+var window = {};
+var document = {};
+var navigator = { userAgent: 'node' };
+var DEBUG = true;
 !function(factory) {
     // Support three module loading scenarios
     if (typeof require === 'function' && typeof exports === 'object' && typeof module === 'object') {

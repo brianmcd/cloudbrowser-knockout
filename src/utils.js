@@ -14,19 +14,9 @@ ko.utils = new (function () {
         }
     }
 
-    // Detect IE versions for bug workarounds (uses IE conditionals, not UA string, for robustness)
-    var ieVersion = (function() {
-        var version = 3, div = document.createElement('div'), iElems = div.getElementsByTagName('i');
-        
-        // Keep constructing conditional HTML blocks until we hit one that resolves to an empty fragment
-        while (
-            div.innerHTML = '<!--[if gt IE ' + (++version) + ']><i></i><![endif]-->',
-            iElems[0]
-        );        
-        return version > 4 ? version : undefined;        
-    }());
-    var isIe6 = ieVersion === 6,
-        isIe7 = ieVersion === 7;
+    var isIe6 = false;
+    var isIe7 = false;
+    var ieVersion = 9;
 
     function isClickOnCheckableElement(element, eventType) {
         if ((ko.utils.tagNameLower(element) !== "input") || !element.type) return false;
