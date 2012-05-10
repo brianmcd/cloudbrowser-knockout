@@ -1,0 +1,15 @@
+{
+  "author": "",
+  "name": "knockout-node",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianmcd/cloudbrowser-knockout.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
